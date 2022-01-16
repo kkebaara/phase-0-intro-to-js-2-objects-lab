@@ -1,18 +1,15 @@
-// Write your solution in this file!
+const employee = 
+{ 	name: "Kenneth",
+	streetAddress: "Denver"}
 
-const employee = {
-    name: 'john',
-    address: "new york"
-}
+function updateEmployeeWithKeyAndValue(employee, key, value){
+	const newObj = { ...employee};
+	newObj[key] = value;
 
+	return newObj;
+  }
 
-function updateEmployeeWithKeyAndValue(employee, key, value) {
-    const newEmployee = {...employee};
-   newEmployee[key] = value;
-   return newEmployee;
-};
-
-function destructivelyUpdateEmployeeWithKeyAndValue (employee, key, value) {
+  function destructivelyUpdateEmployeeWithKeyAndValue (employee, key, value) {
 	employee[key] = value;
 	return employee;
 };
